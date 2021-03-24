@@ -16,7 +16,7 @@ import org.testng.asserts.Assertion;
 public class BaseTest {
 
     @Test
-    public void checkMessageButton() {
+    public void firstTest() {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -41,9 +41,9 @@ public class BaseTest {
 
         WebElement showMessageButton = driver.findElement(By.xpath("//button[contains(text(), 'Show Message')]"));
         showMessageButton.click();
-        WebElement checkMessageButton  = driver.findElement(By.xpath("//span[contains(text(), 'Hello, my name is')]"));
+        WebElement checkMessageButton  = driver.findElement(By.xpath("//span[text() = 'Hello, my name is']"));
         Boolean displayed = checkMessageButton.isDisplayed();
-        Assert.assertTrue(displayed);
+        Assert.assertTrue(displayed, "Test passed");        //Assert.assertTrue(displayed);
         driver.quit();
 
     }
