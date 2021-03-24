@@ -8,8 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
 public class BaseTest {
 
@@ -35,11 +37,14 @@ public class BaseTest {
         simpleFormDemo.click();
         WebElement inputField = driver.findElement(By.id("user-message"));
         inputField.click();
-        inputField.sendKeys("Hello, my name is");
+        inputField.sendKeys("Hello, my name is"); //
 
-
-
-        //driver.quit();
+        WebElement showMessageButton = driver.findElement(By.xpath("//button[contains(text(), 'Show Message')]"));
+        showMessageButton.click();
+        WebElement checkMessageButton  = driver.findElement(By.xpath("//span[contains(text(), 'Hello, my name is')]"));
+        Boolean displayed = checkMessageButton.isDisplayed();
+        Assert.assertTrue(displayed);
+        driver.quit();
 
     }
 }
