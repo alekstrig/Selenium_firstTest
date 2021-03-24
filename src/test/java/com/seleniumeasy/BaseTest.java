@@ -33,10 +33,13 @@ public class BaseTest {
 
         WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
         inputForms.click();
+
         WebElement simpleFormDemo = driver.findElement(By.xpath("//ul[@id = 'treemenu'] //a[text()='Simple Form Demo']"));
         simpleFormDemo.click();
+
         WebElement inputField = driver.findElement(By.id("user-message"));
         inputField.click();
+
         inputField.sendKeys("Hello, my name is"); //
 
         WebElement showMessageButton = driver.findElement(By.xpath("//button[contains(text(), 'Show Message')]"));
@@ -44,7 +47,42 @@ public class BaseTest {
         WebElement checkMessageButton  = driver.findElement(By.xpath("//span[text() = 'Hello, my name is']"));
         Boolean displayed = checkMessageButton.isDisplayed();
         Assert.assertTrue(displayed, "Test passed");        //Assert.assertTrue(displayed);
+
         driver.quit();
 
+
     }
+    @Test
+    public void secondTest() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.seleniumeasy.com/test/"); //visibilityOfAllElementsLocatedBy
+        try{
+            new WebDriverWait(driver,5).until(ExpectedConditions
+                    .visibilityOfElementLocated(By.xpath("//*[@id = 'at-cv-lightbox-close']")));
+            WebElement destrButton = driver.findElement(By.xpath("//*[@id = 'at-cv-lightbox-close']"));
+            destrButton.click();
+        }
+        catch (Exception e){
+            System.out.println("hjdsgfjh");
+        }
+        WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
+        inputForms.click();
+
+        WebElement simpleFormDemo = driver.findElement(By.xpath("//ul[@id = 'treemenu'] //a[text()='Simple Form Demo']"));
+        simpleFormDemo.click();
+
+        WebElement inputField = driver.findElement(By.id("user-message"));
+        inputField.click();
+
+        WebElement.
+
+
+
+        //driver.quit();
+
+
+    }
+
+
 }
