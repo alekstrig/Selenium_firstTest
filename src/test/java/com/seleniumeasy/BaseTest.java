@@ -75,9 +75,20 @@ public class BaseTest {
         WebElement inputField = driver.findElement(By.id("user-message"));
         inputField.click();
 
-        WebElement.
+        WebElement twoInputFieldA = driver.findElement(By.xpath("//input[@id='sum1']"));
+        twoInputFieldA.click();
+        twoInputFieldA.sendKeys("5");
 
+        WebElement twoInputFieldB = driver.findElement(By.xpath("//input[@id='sum2']"));
+        twoInputFieldB.click();
+        twoInputFieldB.sendKeys("10");
 
+        WebElement getTotal = driver.findElement(By.xpath("//form[@id = 'gettotal']/*[@class = 'btn btn-default']"));
+        getTotal.click();
+
+        WebElement checkElementTotal = driver.findElement(By.xpath("//span[@id = 'displayvalue']"));
+        checkElementTotal.getText();
+        Assert.assertEquals(checkElementTotal.getText(),"15");
 
         //driver.quit();
 
