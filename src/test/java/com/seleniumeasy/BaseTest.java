@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
 
-public class BaseTest {
+public class BaseTest {   //extends
 
     @Test
     public void firstTest() {
@@ -44,9 +44,9 @@ public class BaseTest {
 
         WebElement showMessageButton = driver.findElement(By.xpath("//button[contains(text(), 'Show Message')]"));
         showMessageButton.click();
-        WebElement checkMessageButton  = driver.findElement(By.xpath("//span[text() = 'Hello, my name is']"));
-        Boolean displayed = checkMessageButton.isDisplayed();
-        Assert.assertTrue(displayed, "Test passed");        //Assert.assertTrue(displayed);
+        WebElement checkMessageButton  = driver.findElement(By.xpath("//span[@id = 'display']"));
+        checkMessageButton.getText();
+        Assert.assertEquals(checkMessageButton.getText(), "Hello, my name is" );
 
         driver.quit();
 
@@ -89,6 +89,44 @@ public class BaseTest {
         WebElement checkElementTotal = driver.findElement(By.xpath("//span[@id = 'displayvalue']"));
         checkElementTotal.getText();
         Assert.assertEquals(checkElementTotal.getText(),"15");
+
+        //driver.quit();
+
+
+    }
+
+    @Test
+    public void thirdTest() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.seleniumeasy.com/test/"); //visibilityOfAllElementsLocatedBy
+        try{
+            new WebDriverWait(driver,5).until(ExpectedConditions
+                    .visibilityOfElementLocated(By.xpath("//*[@id = 'at-cv-lightbox-close']")));
+            WebElement destrButton = driver.findElement(By.xpath("//*[@id = 'at-cv-lightbox-close']"));
+            destrButton.click();
+        }
+        catch (Exception e){
+            System.out.println("hjdsgfjh");
+        }
+        WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
+        inputForms.click();
+
+        WebElement checkBoxDemo = driver.findElement(By.xpath("//li[@style ='display: list-item;']//a[text() ='Checkbox Demo']"));
+        checkBoxDemo.click();
+
+        WebElement multipleCheckDemoOne = driver.findElement(By.xpath("//label[text()='Option 1']"));
+        multipleCheckDemoOne.click();
+
+        WebElement multipleCheckDemoTwo = driver.findElement(By.xpath("//label[text()='Option 3']"));
+        multipleCheckDemoTwo.click();
+
+
+
+
+        Assert.assertTrue(multipleCheckDemoOne.isEnabled(),"Falls");
+        Assert.assertTrue(multipleCheckDemoTwo.isEnabled(),"Falls");
+
 
         //driver.quit();
 
