@@ -157,7 +157,18 @@ public class BaseTest {   //extends
         executorAge.executeScript("arguments[0].click();", ageGroup);
 
         WebElement getValues = driver.findElement(By.xpath("//div[@class ='panel-body']/button[@class = 'btn btn-default']"));
-        getValues.click();
+        JavascriptExecutor executorValues = (JavascriptExecutor)driver;
+        executorValues.executeScript("arguments[0].click();", getValues);
+
+
+        WebElement checkGetValues = driver.findElement(By.xpath("//p[@class = 'groupradiobutton' and text() = 'Sex : Male']"));
+
+        Assert.assertEquals(checkGetValues.getText(),"Sex : Male\nAge group: 5 - 15");
+
+
+        driver.quit();
+
+
 
 
 
