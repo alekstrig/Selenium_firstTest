@@ -3,8 +3,9 @@ package com.seleniumeasy;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class CurrentDate {
+public  class CurrentDate {
     public static void main(String[] args) {
+
 
 
             LocalDateTime today = LocalDateTime.now();
