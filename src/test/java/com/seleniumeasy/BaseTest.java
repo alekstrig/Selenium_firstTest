@@ -67,6 +67,12 @@ public class BaseTest {
             Thread.sleep(1000);
         }
 
+        public void clickToElementWithJS(WebElement element) throws InterruptedException {
+            JavascriptExecutor executor = (JavascriptExecutor) driver;
+            executor.executeScript("arguments[0].click();", element);
+        }
+
+
         public void waitUntilVisibility(By locator, int... time) {
             int waitTime = time.length > 0 ? time[0] : 5;
             new WebDriverWait(driver, waitTime)

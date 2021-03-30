@@ -11,21 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ForthTest  {     //extends PrimeTest
+public class ForthTest extends BaseTest  {     //extends PrimeTest
     @Test
-    public void forthTest() {
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.seleniumeasy.com/test/"); //visibilityOfAllElementsLocatedBy
-        try{
-            new WebDriverWait(driver,5).until(ExpectedConditions
-                    .visibilityOfElementLocated(By.xpath("//*[@id = 'at-cv-lightbox-close']")));
-            WebElement destrButton = driver.findElement(By.xpath("//*[@id = 'at-cv-lightbox-close']"));
-            destrButton.click();
-        }
-        catch (Exception e){
-            System.out.println("hjdsgfjh");
-        }
+    public void forthTest() throws InterruptedException {
+
         WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
         inputForms.click();
 
@@ -33,16 +22,20 @@ public class ForthTest  {     //extends PrimeTest
         radioButtonsDemo.click();
 
         WebElement sexMale = driver.findElement(By.xpath("//h4[text() = 'Sex : ']/following-sibling::label[1]"));
-        JavascriptExecutor executorMale = (JavascriptExecutor)driver;
-        executorMale.executeScript("arguments[0].click();", sexMale);
+        clickToElementWithJS(sexMale);
+
+        /*JavascriptExecutor executorMale = (JavascriptExecutor)driver;
+        executorMale.executeScript("arguments[0].click();", sexMale); */
 
         WebElement ageGroup = driver.findElement(By.xpath("//input[@value = '5 - 15']"));
-        JavascriptExecutor executorAge = (JavascriptExecutor)driver;
-        executorAge.executeScript("arguments[0].click();", ageGroup);
+        clickToElementWithJS(ageGroup);
+       /* JavascriptExecutor executorAge = (JavascriptExecutor)driver;
+        executorAge.executeScript("arguments[0].click();", ageGroup);*/
 
         WebElement getValues = driver.findElement(By.xpath("//div[@class ='panel-body']/button[@class = 'btn btn-default']"));
-        JavascriptExecutor executorValues = (JavascriptExecutor)driver;
-        executorValues.executeScript("arguments[0].click();", getValues);
+        clickToElementWithJS(getValues);
+       /* JavascriptExecutor executorValues = (JavascriptExecutor)driver;
+        executorValues.executeScript("arguments[0].click();", getValues); */
 
 
         WebElement checkGetValues = driver.findElement(By.xpath("//p[@class = 'groupradiobutton' and text() = 'Sex : Male']"));

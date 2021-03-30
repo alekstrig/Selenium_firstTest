@@ -10,20 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SecondTest extends PrimeTest {
+public class SecondTest extends BaseTest {
     @Test
-    public void secondTest() {
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.seleniumeasy.com/test/"); //visibilityOfAllElementsLocatedBy
-        try {
-            new WebDriverWait(driver, 5).until(ExpectedConditions
-                    .visibilityOfElementLocated(By.xpath("//*[@id = 'at-cv-lightbox-close']")));
-            WebElement destrButton = driver.findElement(By.xpath("//*[@id = 'at-cv-lightbox-close']"));
-            destrButton.click();
-        } catch (Exception e) {
-            System.out.println("hjdsgfjh");
-        }
+    public void secondTest  () {
+
         WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
         inputForms.click();
 

@@ -12,22 +12,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class FirstTest extends PrimeTest {   //extends
+public class FirstTest extends BaseTest {   //extends
 
     @Test
     public void firstTest() {
-
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.seleniumeasy.com/test/"); //visibilityOfAllElementsLocatedBy
-        try {
-            new WebDriverWait(driver, 5).until(ExpectedConditions
-                    .visibilityOfElementLocated(By.xpath("//*[@id = 'at-cv-lightbox-close']")));
-            WebElement destrButton = driver.findElement(By.xpath("//*[@id = 'at-cv-lightbox-close']"));
-            destrButton.click();
-        } catch (Exception e) {
-            System.out.println("hjdsgfjh");
-        }
 
         WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
         inputForms.click();

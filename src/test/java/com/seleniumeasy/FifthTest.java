@@ -39,7 +39,7 @@ public class FifthTest  {  //extends PrimeTest
 
         Assert.assertEquals(selectDay.getText(), "Tuesday");
 
-        driver.quit();
+
 
 
 

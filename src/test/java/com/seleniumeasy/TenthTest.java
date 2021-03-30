@@ -9,20 +9,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class TenthTest {
+public class TenthTest extends BaseTest {
     @Test
     public void tenthTesn() {
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.seleniumeasy.com/test/"); //visibilityOfAllElementsLocatedBy
-        try {
-            new WebDriverWait(driver, 5).until(ExpectedConditions
-                    .visibilityOfElementLocated(By.xpath("//*[@id = 'at-cv-lightbox-close']")));
-            WebElement destrButton = driver.findElement(By.xpath("//*[@id = 'at-cv-lightbox-close']"));
-            destrButton.click();
-        } catch (Exception e) {
-            System.out.println("hjdsgfjh");
-        }
+
 
         WebElement getInTable = driver.findElement(By.xpath("//li[3][@class ='tree-branch']"));
         getInTable.click();

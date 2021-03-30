@@ -14,20 +14,10 @@ import org.testng.annotations.Test;
 import javax.swing.border.Border;
 import javax.swing.text.Style;
 
-public class SeventhTest {
+public class SeventhTest extends BaseTest {
     @Test
     public void seventhTest() {
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.seleniumeasy.com/test/"); //visibilityOfAllElementsLocatedBy
-        try {
-            new WebDriverWait(driver, 5).until(ExpectedConditions
-                    .visibilityOfElementLocated(By.xpath("//*[@id = 'at-cv-lightbox-close']")));
-            WebElement destrButton = driver.findElement(By.xpath("//*[@id = 'at-cv-lightbox-close']"));
-            destrButton.click();
-        } catch (Exception e) {
-            System.out.println("hjdsgfjh");
-        }
+
 
         WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
         inputForms.click();
