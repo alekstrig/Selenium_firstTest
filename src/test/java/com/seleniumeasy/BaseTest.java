@@ -30,9 +30,8 @@ public class BaseTest {
         }
 
 
-        @AfterMethod(alwaysRun = true)
-        public void afterMethod() {
-            driver.quit();
+      @AfterMethod(alwaysRun = true)
+      public void afterMethod() { driver.quit();
         }
 
 

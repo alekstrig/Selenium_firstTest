@@ -11,24 +11,39 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ForthTest extends BaseTest  {     //extends PrimeTest
+public class ForthTest extends BaseTest  {
+
+    private By radioButtonsDemoItem = By.xpath("//li[@class='tree-branch']/ul/li[3]/a[text() = 'Radio Buttons Demo']");
+    private By maleButton = By.xpath("//h4[text() = 'Sex : ']/following-sibling::label[1]");
+    private By ageGroup = By.xpath("//input[@value = '5 - 15']");
+    private By getValues = By.xpath("//div[@class ='panel-body']/button[@class = 'btn btn-default']");
+    private By checkGetValues = By.xpath("//div[@class ='panel-body']/button[@class = 'btn btn-default']");
+
+
     @Test
     public void forthTest() throws InterruptedException {
 
-        WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
-        inputForms.click();
+        find(inputFormMenuItem).click();
+        find(radioButtonsDemoItem).click();
+        //clickToElementWithJS.maleButton;
+        //find(maleButton);
+        find(ageGroup).click();
 
-        WebElement radioButtonsDemo = driver.findElement(By.xpath("//li[@class='tree-branch']/ul/li[3]/a[text() = 'Radio Buttons Demo']"));
-        radioButtonsDemo.click();
 
-        WebElement sexMale = driver.findElement(By.xpath("//h4[text() = 'Sex : ']/following-sibling::label[1]"));
-        clickToElementWithJS(sexMale);
+       // WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
+       // inputForms.click();
+
+       // WebElement radioButtonsDemo = driver.findElement(By.xpath("//li[@class='tree-branch']/ul/li[3]/a[text() = 'Radio Buttons Demo']"));
+       // radioButtonsDemo.click();
+
+       // WebElement sexMale = driver.findElement(By.xpath("//h4[text() = 'Sex : ']/following-sibling::label[1]"));
+       // clickToElementWithJS(sexMale);
 
         /*JavascriptExecutor executorMale = (JavascriptExecutor)driver;
         executorMale.executeScript("arguments[0].click();", sexMale); */
 
-        WebElement ageGroup = driver.findElement(By.xpath("//input[@value = '5 - 15']"));
-        clickToElementWithJS(ageGroup);
+        //WebElement ageGroup = driver.findElement(By.xpath("//input[@value = '5 - 15']"));
+        //clickToElementWithJS(ageGroup);
        /* JavascriptExecutor executorAge = (JavascriptExecutor)driver;
         executorAge.executeScript("arguments[0].click();", ageGroup);*/
 
@@ -38,9 +53,9 @@ public class ForthTest extends BaseTest  {     //extends PrimeTest
         executorValues.executeScript("arguments[0].click();", getValues); */
 
 
-        WebElement checkGetValues = driver.findElement(By.xpath("//p[@class = 'groupradiobutton' and text() = 'Sex : Male']"));
+        //WebElement checkGetValues = driver.findElement(By.xpath("//p[@class = 'groupradiobutton' and text() = 'Sex : Male']"));
 
-        Assert.assertEquals(checkGetValues.getText(),"Sex : Male\nAge group: 5 - 15");
+        //Assert.assertEquals(checkGetValues.getText(),"Sex : Male\nAge group: 5 - 15");
     }
 }
 

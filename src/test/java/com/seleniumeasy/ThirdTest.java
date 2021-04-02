@@ -11,10 +11,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ThirdTest extends BaseTest {
+
+    By checkBoxDemo = By.xpath("//li[@style ='display: list-item;']//a[text() ='Checkbox Demo']");
+    By multipleCheckDemoOne = By.xpath("//label[text()='Option 1']");
+    By multipleCheckDemoTwo = By.xpath("//label[text()='Option 3']");
+
+
     @Test
     public void thirdTest() {
 
-        WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
+        /*WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
         inputForms.click();
 
         WebElement checkBoxDemo = driver.findElement(By.xpath("//li[@style ='display: list-item;']//a[text() ='Checkbox Demo']"));
@@ -24,10 +30,20 @@ public class ThirdTest extends BaseTest {
         multipleCheckDemoOne.click();
 
         WebElement multipleCheckDemoTwo = driver.findElement(By.xpath("//label[text()='Option 3']"));
-        multipleCheckDemoTwo.click();
+        multipleCheckDemoTwo.click();*/
 
-        Assert.assertTrue(multipleCheckDemoOne.isEnabled(),"Falls");
-        Assert.assertTrue(multipleCheckDemoTwo.isEnabled(),"Falls");
+        find(inputFormMenuItem).click();
+        find(checkBoxDemo).click();
+        find(multipleCheckDemoOne).click();
+        find(multipleCheckDemoTwo).click();
+
+        Boolean clickCheckBoxesOne = find(multipleCheckDemoOne).isEnabled();
+        Boolean clickCheckBoxesTwo = find(multipleCheckDemoTwo).isEnabled();
+
+
+
+        Assert.assertTrue(clickCheckBoxesOne,"Falls");
+        Assert.assertTrue(clickCheckBoxesTwo,"Falls");
 
 
 
