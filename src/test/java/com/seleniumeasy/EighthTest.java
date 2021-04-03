@@ -41,7 +41,7 @@ public class EighthTest extends BaseTest {
 
 
         WebElement checkSetDate = driver.findElement(By.xpath("//input[@placeholder = 'dd/mm/yyyy']"));
-        Assert.assertEquals(checkSetDate.getAttribute("value"), "28/03/2021");
+        Assert.assertEquals(checkSetDate.getAttribute("value"), "02/04/2021");
 
 
 
