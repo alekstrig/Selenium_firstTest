@@ -3,8 +3,20 @@
 <suite name="my-app" verbose="1" >
     <test name="test" >
         <classes>
+            <class name="com.seleniumeasy.TwoInputFields" />
+            <class name="com.seleniumeasy.SimpleFormDemo" />
+            <class name="com.seleniumeasy.SelectListDemo" />
+            <class name="com.seleniumeasy.MultiSelectListDemo" />
             <class name="com.seleniumeasy.FirstTest" />
             <class name="com.seleniumeasy.SecondTest" />
+            <class name="com.seleniumeasy.ThirdTest" />
+            <class name="com.seleniumeasy.FifthTest" />
+            <class name="com.seleniumeasy.SixthTest" />
+            <class name="com.seleniumeasy.SeventhTest" />
+            <class name="com.seleniumeasy.EighthTest" />
+            <class name="com.seleniumeasy.NinthTest" />
+            <class name="com.seleniumeasy.EleventhTest" />
+
         </classes>
     </test>
 

@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
+/*
 public class ForthTest extends BaseTest  {
 
     private By radioButtonsDemoItem = By.xpath("//li[@class='tree-branch']/ul/li[3]/a[text() = 'Radio Buttons Demo']");
@@ -25,8 +25,9 @@ public class ForthTest extends BaseTest  {
 
         find(inputFormMenuItem).click();
         find(radioButtonsDemoItem).click();
-        //clickToElementWithJS.maleButton;
-        //find(maleButton);
+        find(maleButton);
+        //clickToElementWithJS(maleButton;
+
         find(ageGroup).click();
 
 
@@ -45,17 +46,17 @@ public class ForthTest extends BaseTest  {
         //WebElement ageGroup = driver.findElement(By.xpath("//input[@value = '5 - 15']"));
         //clickToElementWithJS(ageGroup);
        /* JavascriptExecutor executorAge = (JavascriptExecutor)driver;
-        executorAge.executeScript("arguments[0].click();", ageGroup);*/
+        executorAge.executeScript("arguments[0].click();", ageGroup);
 
         WebElement getValues = driver.findElement(By.xpath("//div[@class ='panel-body']/button[@class = 'btn btn-default']"));
         clickToElementWithJS(getValues);
        /* JavascriptExecutor executorValues = (JavascriptExecutor)driver;
-        executorValues.executeScript("arguments[0].click();", getValues); */
+        executorValues.executeScript("arguments[0].click();", getValues);
 
 
         //WebElement checkGetValues = driver.findElement(By.xpath("//p[@class = 'groupradiobutton' and text() = 'Sex : Male']"));
 
-        //Assert.assertEquals(checkGetValues.getText(),"Sex : Male\nAge group: 5 - 15");
+        Assert.assertEquals(checkGetValues.getText(),"Sex : Male\nAge group: 5 - 15");
     }
 }
-
+*/

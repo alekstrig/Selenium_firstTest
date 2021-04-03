@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
             find(getTotalButton).click();
 
             String text = find(displayedText).getText();
-            Assert.assertEquals(text, "44");
+            Assert.assertEquals(text, "45");
 
 
         }
