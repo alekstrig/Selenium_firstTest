@@ -3,9 +3,7 @@
 <suite name="my-app" verbose="1" >
     <test name="test" >
         <classes>
-            <class name="com.seleniumeasy.FifthTest" />
-            <class name="com.seleniumeasy.SecondTest"/>
-
+            <class name="com.seleniumeasy.FirstTest" />
         </classes>
     </test>
 
