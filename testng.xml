@@ -4,9 +4,9 @@
     <test name="test" >
         <classes>
             <class name="com.seleniumeasy.FirstTest" />
-            <class name="com.seleniumeasy.SecondTest "/>
-            <class name="com.seleniumeasy.ThirdTest "/>
-            <class name="com.seleniumeasy.FifthTest "/>
+            <class name="com.seleniumeasy.SecondTest"/>
+            <class name="com.seleniumeasy.ThirdTest"/>
+            <class name="com.seleniumeasy.FifthTest"/>
         </classes>
     </test>
 
