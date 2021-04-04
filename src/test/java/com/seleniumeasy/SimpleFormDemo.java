@@ -1,4 +1,4 @@
-package com.seleniumeasy;
+/*package com.seleniumeasy;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -24,4 +24,4 @@ public class SimpleFormDemo extends BaseTest {
     }
 
 
-}
+}*/

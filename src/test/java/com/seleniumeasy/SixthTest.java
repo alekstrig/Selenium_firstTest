@@ -13,14 +13,38 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SixthTest extends BaseTest {
-    @Test
-    public void sixthTest() {
 
-        WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
+    By dropDownList = By.xpath("//li[@class = 'tree-branch']/*/li/a[text() = 'Select Dropdown List']");
+    By selectFlorida = By.xpath("//option[text() = 'Florida']");
+    By selectNewYork = By.xpath("//option[text() = 'New York']");
+    By printAll = By.xpath("//button[@id ='printAll']");
+    By checkPrintAll = By.xpath("//p[@class = 'getall-selected']");
+
+    /*Actions actions = new Actions(driver);
+        actions.keyDown(Keys.CONTROL).click(selectNewYork).click(printAll).keyUp(Keys.CONTROL).build().perform();*/
+
+
+    @Test
+    public void sixthTest() throws InterruptedException {
+
+        find(inputFormMenuItem).click();
+        find(dropDownList).click();
+        find(selectFlorida).click();
+        Actions actions = new Actions(driver);
+        actions.keyDown(Keys.CONTROL).click(find(selectNewYork)).click(find(printAll)).keyUp(Keys.CONTROL).build().perform();
+        find(printAll).click();
+
+        String checkText = find(checkPrintAll).getText();
+        Assert.assertEquals(checkText, "Options selected are : Florida,New York");
+
+
+
+
+        /*WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
         inputForms.click();
 
-        WebElement dropDownList = driver.findElement(By.xpath("//li[@class = 'tree-branch']/*/li/a[text() = 'Select Dropdown List']"));
-        dropDownList.click();
+        WebElement dropDownList = driver.findElement(By.xpath("//li[@class = 'tree-branch']/*///li/a[text() = 'Select Dropdown List']"));
+        /*dropDownList.click();
 
         WebElement selectFlorida = driver.findElement(By.xpath("//option[text() = 'Florida']"));
         selectFlorida.click();
@@ -31,7 +55,7 @@ public class SixthTest extends BaseTest {
         actions.keyDown(Keys.CONTROL).click(selectNewYork).click(printAll).keyUp(Keys.CONTROL).build().perform();
 
         WebElement checkPrintAll = driver.findElement(By.xpath("//p[@class = 'getall-selected']"));
-        Assert.assertEquals(checkPrintAll.getText(), "Options selected are : Florida,New York");
+        Assert.assertEquals(checkPrintAll.getText(), "Options selected are : Florida,New York");*/
 
 
     }

@@ -1,4 +1,4 @@
-//package com.seleniumeasy;
+package com.seleniumeasy;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -10,14 +10,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-/*
+
 public class ForthTest extends BaseTest  {
 
     private By radioButtonsDemoItem = By.xpath("//li[@class='tree-branch']/ul/li[3]/a[text() = 'Radio Buttons Demo']");
     private By maleButton = By.xpath("//h4[text() = 'Sex : ']/following-sibling::label[1]");
     private By ageGroup = By.xpath("//input[@value = '5 - 15']");
     private By getValues = By.xpath("//div[@class ='panel-body']/button[@class = 'btn btn-default']");
-    private By checkGetValues = By.xpath("//div[@class ='panel-body']/button[@class = 'btn btn-default']");
+    private By checkGetValues = By.xpath("//p[@class ='groupradiobutton']");
 
 
     @Test
@@ -25,10 +25,16 @@ public class ForthTest extends BaseTest  {
 
         find(inputFormMenuItem).click();
         find(radioButtonsDemoItem).click();
-        find(maleButton);
-        //clickToElementWithJS(maleButton;
 
+        scrollToElementWithJS(find(maleButton));
+        find(maleButton).click();
         find(ageGroup).click();
+        find(getValues).click();
+
+
+        String text = find(checkGetValues).getText();
+        Assert.assertEquals(text,"Sex : Male\nAge group: 5 - 15");
+
 
 
        // WebElement inputForms = driver.findElement(By.xpath("//a[text()='Input Forms']"));
@@ -45,18 +51,18 @@ public class ForthTest extends BaseTest  {
 
         //WebElement ageGroup = driver.findElement(By.xpath("//input[@value = '5 - 15']"));
         //clickToElementWithJS(ageGroup);
-       /* JavascriptExecutor executorAge = (JavascriptExecutor)driver;
+       /*JavascriptExecutor executorAge = (JavascriptExecutor)driver;
         executorAge.executeScript("arguments[0].click();", ageGroup);
 
         WebElement getValues = driver.findElement(By.xpath("//div[@class ='panel-body']/button[@class = 'btn btn-default']"));
         clickToElementWithJS(getValues);
-       /* JavascriptExecutor executorValues = (JavascriptExecutor)driver;
-        executorValues.executeScript("arguments[0].click();", getValues);
+       JavascriptExecutor executorValues = (JavascriptExecutor)driver;
+        executorValues.executeScript("arguments[0].click();", getValues);*/
 
 
         //WebElement checkGetValues = driver.findElement(By.xpath("//p[@class = 'groupradiobutton' and text() = 'Sex : Male']"));
 
-        Assert.assertEquals(checkGetValues.getText(),"Sex : Male\nAge group: 5 - 15");
+
     }
 }
-*/
+

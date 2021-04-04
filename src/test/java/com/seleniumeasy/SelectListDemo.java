@@ -1,4 +1,4 @@
-package com.seleniumeasy;
+/*package com.seleniumeasy;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -33,3 +33,4 @@ public class SelectListDemo extends BaseTest {
 
 
 }
+*/

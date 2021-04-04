@@ -1,4 +1,4 @@
-package com.seleniumeasy;
+/*package com.seleniumeasy;
 
 
 import org.openqa.selenium.By;
@@ -31,3 +31,4 @@ import org.testng.annotations.Test;
 
     }
 
+*/
