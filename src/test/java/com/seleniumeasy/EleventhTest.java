@@ -17,7 +17,7 @@ public class EleventhTest extends BaseTest {
         find(getAlertsModals).click();
         find(getJSAlerts).click();
         find(clickMe).click();
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         Alert ale = driver.switchTo().alert();
         ale.dismiss();
 

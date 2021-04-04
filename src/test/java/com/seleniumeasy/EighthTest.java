@@ -32,7 +32,7 @@ public class EighthTest extends BaseTest {
         find(setDate).sendKeys(getYesterdayDateInFormat("dd/MM/yyyy"));
 
         String chekText = find(checkSetDate).getAttribute("value");
-        Assert.assertEquals(chekText, "03/04/2021");
+        Assert.assertEquals(chekText, getYesterdayDateInFormat("dd/MM/yyyy"));
         Thread.sleep(3000);
 
 
