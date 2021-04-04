@@ -7,6 +7,14 @@
             <class name="com.seleniumeasy.SecondTest"/>
             <class name="com.seleniumeasy.ThirdTest"/>
             <class name="com.seleniumeasy.FifthTest"/>
+            <class name="com.seleniumeasy.ForthTest"/>
+            <class name="com.seleniumeasy.SixthTest "/>
+            <class name="com.seleniumeasy.SeventhTest "/>
+            <class name="com.seleniumeasy.EighthTest "/>
+            <class name="com.seleniumeasy.NinthTest "/>
+            <class name="com.seleniumeasy.TenthTest "/>
+            <class name="com.seleniumeasy.EleventhTest "/>
+
         </classes>
     </test>
 
