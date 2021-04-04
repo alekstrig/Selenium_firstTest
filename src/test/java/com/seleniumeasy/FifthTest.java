@@ -1,15 +1,8 @@
 package com.seleniumeasy;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.internal.BaseTestMethod;
-
-import java.security.Key;
 
 public class FifthTest extends BaseTest  {  //extends PrimeTest
 

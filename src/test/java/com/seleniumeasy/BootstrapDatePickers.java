@@ -1,15 +1,9 @@
 package com.seleniumeasy;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class BootstrapDatePickers extends BaseTest {
 

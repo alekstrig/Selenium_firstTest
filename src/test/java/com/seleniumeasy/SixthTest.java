@@ -1,14 +1,8 @@
 package com.seleniumeasy;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -32,10 +26,10 @@ public class SixthTest extends BaseTest {
         find(selectFlorida).click();
         Actions actions = new Actions(driver);
         actions.keyDown(Keys.CONTROL).click(find(selectNewYork)).click(find(printAll)).keyUp(Keys.CONTROL).build().perform();
+        Thread.sleep(2000);
         find(printAll).click();
 
         String checkText = find(checkPrintAll).getText();
-        Thread.sleep(2000);
         Assert.assertEquals(checkText, "Options selected are : Florida,New York");
 
 

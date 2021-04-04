@@ -1,5 +1,4 @@
 package com.seleniumeasy;
-
 import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;

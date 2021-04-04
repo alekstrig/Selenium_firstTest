@@ -1,18 +1,7 @@
 package com.seleniumeasy;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-import javafx.css.StyleableObjectProperty;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import javax.swing.border.Border;
-import javax.swing.text.Style;
 
 public class SeventhTest extends BaseTest {
             By ajaxFormSubMit = By.xpath("//li[@class = 'tree-branch']//a[text() = 'Ajax Form Submit']");
