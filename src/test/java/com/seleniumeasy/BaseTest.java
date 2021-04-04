@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class BaseTest {
 
@@ -31,7 +32,8 @@ public class BaseTest {
 
 
       @AfterMethod(alwaysRun = true)
-      public void afterMethod() { driver.quit();
+      public void afterMethod() throws InterruptedException { driver.quit();
+          Thread.sleep(5000);
 
         }
 
@@ -50,6 +52,11 @@ public class BaseTest {
         public WebElement find(By locator) {
             return driver.findElement(locator);
         }
+
+    public List<WebElement> finds(By locator) {
+        return driver.findElements(locator);
+    }
+
 
         public void pickFromSelect(WebElement element, String visibleText) {
             Select select = new Select(element);
