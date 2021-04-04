@@ -35,6 +35,7 @@ public class SixthTest extends BaseTest {
         find(printAll).click();
 
         String checkText = find(checkPrintAll).getText();
+        Thread.sleep(2000);
         Assert.assertEquals(checkText, "Options selected are : Florida,New York");
 
 

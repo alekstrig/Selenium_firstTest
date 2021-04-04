@@ -32,8 +32,10 @@ public class BaseTest {
 
 
       @AfterMethod(alwaysRun = true)
-      public void afterMethod() throws InterruptedException { driver.quit();
-          Thread.sleep(5000);
+      public void afterMethod() throws InterruptedException {
+          Thread.sleep(1000);
+            driver.quit();
+
 
         }
 
