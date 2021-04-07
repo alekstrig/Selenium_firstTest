@@ -4,13 +4,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 public class BaseTest {
 
@@ -31,11 +30,8 @@ public class BaseTest {
 
 
       @AfterMethod(alwaysRun = true)
-      public void afterMethod() throws InterruptedException {
-          Thread.sleep(1000);
-            driver.quit();
-
-
+      public void afterMethod() {
+          driver.quit();
         }
 
 
@@ -54,20 +50,17 @@ public class BaseTest {
             return driver.findElement(locator);
         }
 
-    public List<WebElement> finds(By locator) {
-        return driver.findElements(locator);
-    }
 
 
-        public void pickFromSelect(WebElement element, String visibleText) {
+        /*public void pickFromSelect(WebElement element, String visibleText) {
             Select select = new Select(element);
             select.selectByVisibleText(visibleText);
-        }
+        }*/
 
-        public String getPartOfString(String originalString, String regex, int index) {
+        /*public String getPartOfString(String originalString, String regex, int index) {
             String[] strings = originalString.split(regex);
             return strings[index];
-        }
+        }*/
 
         public void scrollToElementWithJS(WebElement element) throws InterruptedException {
             JavascriptExecutor executor = ((JavascriptExecutor) driver);
@@ -75,10 +68,10 @@ public class BaseTest {
             Thread.sleep(1000);
         }
 
-        public void clickToElementWithJS(WebElement element) throws InterruptedException {
+        /*public void clickToElementWithJS(WebElement element) throws InterruptedException {
             JavascriptExecutor executor = (JavascriptExecutor) driver;
             executor.executeScript("arguments[0].click();", element);
-        }
+        }*/
 
 
         public void waitUntilVisibility(By locator, int... time) {

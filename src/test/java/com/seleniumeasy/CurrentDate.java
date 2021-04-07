@@ -1,4 +1,4 @@
-package com.seleniumeasy;
+/*package com.seleniumeasy;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -17,4 +17,4 @@ public  class CurrentDate {
 
 
     }
-}
+}*/

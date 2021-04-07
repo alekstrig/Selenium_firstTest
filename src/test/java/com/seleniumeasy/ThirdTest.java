@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 
 public class ThirdTest extends BaseTest {
 
-    By checkBoxDemo = By.xpath("//li[@style ='display: list-item;']//a[text() ='Checkbox Demo']");
-    By multipleCheckDemoOne = By.xpath("//label[text()='Option 1']");
-    By multipleCheckDemoTwo = By.xpath("//label[text()='Option 3']");
+     private final By checkBoxDemo = By.xpath("//li[@style ='display: list-item;']//a[text() ='Checkbox Demo']");
+     private final By multipleCheckDemoOne = By.xpath("//label[text()='Option 1']");
+     private final By multipleCheckDemoTwo = By.xpath("//label[text()='Option 3']");
 
 
     @Test
@@ -31,8 +31,8 @@ public class ThirdTest extends BaseTest {
         find(multipleCheckDemoOne).click();
         find(multipleCheckDemoTwo).click();
 
-        Boolean clickCheckBoxesOne = find(multipleCheckDemoOne).isEnabled();
-        Boolean clickCheckBoxesTwo = find(multipleCheckDemoTwo).isEnabled();
+        boolean clickCheckBoxesOne = find(multipleCheckDemoOne).isEnabled();
+        boolean clickCheckBoxesTwo = find(multipleCheckDemoTwo).isEnabled();
 
 
 

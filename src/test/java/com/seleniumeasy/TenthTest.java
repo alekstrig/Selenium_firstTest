@@ -17,7 +17,7 @@ public class TenthTest extends BaseTest {
 
 
     @Test
-    public <list> void tenthTesn() throws InterruptedException {
+    public void tenthTesn() throws InterruptedException {
 
         find(getInTable).click();
         find(getInTableFiltr).click();
@@ -31,7 +31,7 @@ public class TenthTest extends BaseTest {
         for (WebElement currentSmile: allSmile) {
             if (currentSmile.isDisplayed()) {
                 String colorIs = currentSmile.getAttribute("style");
-                Thread.sleep(3000);
+                Thread.sleep(500);
                 Assert.assertEquals(colorIs, "color: orange;");
             }
 

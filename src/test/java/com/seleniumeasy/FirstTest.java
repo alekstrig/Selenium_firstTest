@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 
 public class FirstTest extends BaseTest {   //extends
 
-    private By inputField = By.xpath("//input[@id='user-message']");
-    private By showMessageButton = By.xpath("//button[text()='Show Message']");
-    private By checkMessageButton = By.xpath("//span[@id = 'display']");
+    private final By inputField = By.xpath("//input[@id='user-message']");
+    private final By showMessageButton = By.xpath("//button[text()='Show Message']");
+    private final By checkMessageButton = By.xpath("//span[@id = 'display']");
 
     @Test
     public void firstTest() {

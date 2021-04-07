@@ -20,6 +20,7 @@ public class NinthTest extends BaseTest {
         find(openTable).click();
         find(openTableDataSearch).click();
         find(inputField).click();
+        Thread.sleep(1000);
         find(inputField).sendKeys("Emily John", Keys.ENTER);
         String checkText = find(checkInput).getText();
 

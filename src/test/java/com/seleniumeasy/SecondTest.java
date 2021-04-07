@@ -5,10 +5,10 @@ import org.testng.annotations.Test;
 
 public class SecondTest extends BaseTest {
 
-    private By twoInputFieldA = By.xpath("//input[@id='sum1']");
-    private By twoInputFieldB = By.xpath("//input[@id='sum2']");
-    private By getTotal = By.xpath("//button[text()='Get Total']");
-    private By checkElementTotal = By.xpath("//span[@id = 'displayvalue']");
+    private final By twoInputFieldA = By.xpath("//input[@id='sum1']");
+    private final By twoInputFieldB = By.xpath("//input[@id='sum2']");
+    private final By getTotal = By.xpath("//button[text()='Get Total']");
+    private final By checkElementTotal = By.xpath("//span[@id = 'displayvalue']");
 
 
 

@@ -5,11 +5,11 @@ import org.testng.annotations.Test;
 
 public class ForthTest extends BaseTest  {
 
-    private By radioButtonsDemoItem = By.xpath("//li[@class='tree-branch']/ul/li[3]/a[text() = 'Radio Buttons Demo']");
-    private By maleButton = By.xpath("//h4[text() = 'Sex : ']/following-sibling::label[1]");
-    private By ageGroup = By.xpath("//input[@value = '5 - 15']");
-    private By getValues = By.xpath("//div[@class ='panel-body']/button[@class = 'btn btn-default']");
-    private By checkGetValues = By.xpath("//p[@class ='groupradiobutton']");
+    private final By radioButtonsDemoItem = By.xpath("//li[@class='tree-branch']/ul/li[3]/a[text() = 'Radio Buttons Demo']");
+    private final By maleButton = By.xpath("//h4[text() = 'Sex : ']/following-sibling::label[1]");
+    private final By ageGroup = By.xpath("//input[@value = '5 - 15']");
+    private final By getValues = By.xpath("//div[@class ='panel-body']/button[@class = 'btn btn-default']");
+    private final By checkGetValues = By.xpath("//p[@class ='groupradiobutton']");
 
 
     @Test
