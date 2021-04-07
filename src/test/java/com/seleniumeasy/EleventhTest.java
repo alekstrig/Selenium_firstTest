@@ -5,10 +5,10 @@ import org.testng.annotations.Test;
 
 public class EleventhTest extends BaseTest {
 
-        By getAlertsModals = By.xpath("//a[text() ='Alerts & Modals']");
-        By getJSAlerts = By.xpath("//li[@style = 'display: list-item;']//a[text() ='Javascript Alerts']");
-        By clickMe = By.xpath("//button[@onclick = 'myConfirmFunction()']");
-        By checkCancelAlert = By.xpath("//p[@id = 'confirm-demo']");
+        private final By getAlertsModals = By.xpath("//a[text() ='Alerts & Modals']");
+        private final By getJSAlerts = By.xpath("//li[@style = 'display: list-item;']//a[text() ='Javascript Alerts']");
+        private final By clickMe = By.xpath("//button[@onclick = 'myConfirmFunction()']");
+        private final By checkCancelAlert = By.xpath("//p[@id = 'confirm-demo']");
 
     @Test
     public void eleventhTest() throws InterruptedException {
@@ -16,7 +16,7 @@ public class EleventhTest extends BaseTest {
         find(getAlertsModals).click();
         find(getJSAlerts).click();
         find(clickMe).click();
-        Thread.sleep(1000);
+        Thread.sleep(1200);
         Alert ale = driver.switchTo().alert();
         ale.dismiss();
 
